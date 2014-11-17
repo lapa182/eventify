@@ -1,0 +1,28 @@
+<div class="app-content">
+    <main>
+        <header class="event-topbar" data-role="header" data-position="fixed">
+            <a ng-click="doTheBack()"  data-rel="back" class="action action-back glyphicon glyphicon-chevron-left"></a>
+            <h5 class="event-title">{{event.title}}</h5>
+            <a itemprop="url" href="{{event.event_link}}" target="_blank" class="action action-info">
+                <span class="glyphicon glyphicon-info-sign"></span>
+            </a>
+        </header>
+        <section class="event-view">
+            <img ng-src="{{event.pic}}" alt="{{event.title}}" class="event-logo" width="150" height="150" />
+            <article class="event-information">
+                <time datetime="2014-11-15 08:00" class="event-date">{{event.event_date}}</time>
+                <p class="event-title event-ticketPrice">{{event.price}}</p>
+                <footer>
+                    <p class="event-description">{{event.description}}</p>
+                <aside class="event-location">
+                    <a ng-href="#/maps/{{event.id}}">
+                        <span class="glyphicon glyphicon-map-marker"></span>
+                    </a>
+                </aside>
+            </article>
+            <footer class="event-subscription">
+                <a href="{{event.link_subscription}}" class="btn btn-success">Inscreva-se</a>
+            </footer>
+        </section>
+    </main>
+</div>

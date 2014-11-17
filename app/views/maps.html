@@ -1,0 +1,9 @@
+<div class="app-content">
+    <section class="events event-map">
+        <header class="event-topbar">
+            <a ng-click="doTheBack()" class="action action-back glyphicon glyphicon-chevron-left"></a>
+            <h1 class="event-title">Directions</h1>
+        </header>
+        <leaflet idEvent="{{event.id}}" event="{{event.title}}" fulladdress="{{fulladdress}}"></leaflet>
+    </section>
+</div>

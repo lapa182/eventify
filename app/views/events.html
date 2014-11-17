@@ -1,0 +1,29 @@
+<div class="app-content">
+    <section class="events">
+        <header class="event-topbar">
+            <h5 class="event-title event-center">Eventos</h5>
+        </header>
+        <article id="app-content">
+            <ul class="eventsList">
+                <li class="eventsList--item" ng-repeat="event in events">
+                    <a ng-href="#/event/{{event.id}}" title="{{event.title}}">
+                        <img class="event-figure" ng-src="{{event.pic}}" alt="{{event.title}}" width="60" height="60">
+                        <div class="event-guide">
+                            <div itemscope itemtype="http://schema.org/Event">
+                                <span class="event-title" itemprop="name">{{event.title}}</span>
+                                <div style="display:none;">
+                                    <meta itemprop="startDate" content="{{event.event_date}}">{{event.event_date}}</div>
+                            </div>
+                            <div itemprop="location" itemscope itemtype="http://schema.org/PostalAddress">
+                                <div><span class="event-place" itemprop="addressLocality">{{event.address.city}}</span>, <span class="event-place" itemprop="addressRegion">{{event.address.state}}, </span>
+                                </div>
+                                <div class="event-place" itemprop="addressCountry">{{event.address.country}}</div>
+                            </div>
+                            <time datetime="{{event.event_date}}">{{event.event_date}}</time>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </article>
+    </section>
+</div>

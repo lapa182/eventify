@@ -1,0 +1,26 @@
+{
+  "version": "1.0",
+  "name": "Eventify",
+  "description": "An app to view events nearby you.",
+  "launch_path": "/index.html",
+  "icons": {
+    "30": "/images/icon-30x30.png",
+    "60": "/images/icon-60x60.png",
+    "90": "/images/icon-90x90.png",
+    "120": "/images/icon-120x120.png",
+    "128": "/images/icon-128x128.png"
+  },
+  "developer": {
+    "name": "Igo Lapa",
+    "url": "http://github.com/lapa182"
+  },
+  "installs_allowed_from": ["*"],
+  "type": "privileged",
+  "permissions": {
+    "systemXHR": {
+      "description": "Required to get event data."
+    }
+  },
+  "appcache_path": "/cache.manifest",
+  "default_locale": "en"
+}

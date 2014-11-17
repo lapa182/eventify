@@ -34,7 +34,7 @@ angular
         templateUrl: 'views/events.html',
         controller: 'EventsCtrl'
       })
-      .when('/maps', {
+      .when('/maps/:id', {
         templateUrl: 'views/maps.html',
         controller: 'MapsCtrl'
       })

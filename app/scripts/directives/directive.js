@@ -5,7 +5,7 @@ angular.module('eventifyApp').directive('leaflet', function () {
 
     directive.restrict = 'E'; /* restrict this directive to elements */
 
-    directive.templateUrl = "views/leaflet.html";
+    directive.templateUrl = "/views/leaflet.html";
     directive.scope = {
         id: '=id'
     }
@@ -74,12 +74,12 @@ angular.module('eventifyApp').directive('loading', function () {
 
     directive.restrict = 'E'; /* restrict this directive to elements */
 
-    directive.templateUrl = "views/loading.html";
+    directive.templateUrl = "/views/loading.html";
 
     directive.link = function (scope,obj) {
        
         scope.$on('openLoading', function (event, data) {
-          obj.css("display","block");
+          obj.css("display","flex");
         });
         scope.$on('closeLoading', function (event, data) {
           obj.css("display","none");
